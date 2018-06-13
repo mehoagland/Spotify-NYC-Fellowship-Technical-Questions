@@ -21,8 +21,8 @@ function sortByStrings(s, t) {
   return results.join("");
 }
 
-console.log(sortByStrings("weather", "therapyw")); //theeraw
-console.log(sortByStrings("good", "odg")); //oodg
+//console.log(sortByStrings("weather", "therapyw")); //theeraw
+//console.log(sortByStrings("good", "odg")); //oodg
 
 // Question 2
 // Given an encoded string, return its corresponding decoded string.
@@ -30,8 +30,17 @@ console.log(sortByStrings("good", "odg")); //oodg
 // For s = "4[ab]", the output should be decodeString(s) = "abababab"
 // For s = "2[b3[a]]", the output should be decodeString(s) = "baaabaaa"
 
-function decodeString(s) {}
-//console.log(decodeString());
+function decodeString(s) {
+  for (var i = 0; i < s.length; i++) {
+    var current = s[i];
+    if (current === "[") {
+      console.log(current);
+    }
+    //console.log(current);
+  }
+}
+//console.log(decodeString("4[ab]"));
+decodeString("2[b3[a]]");
 
 // Question 3
 // Your quirky boss collects rare, old coins.
