@@ -1,3 +1,4 @@
+//Question 1
 function sortByStrings(stringA, stringB) {
   var results = [];
 
@@ -17,3 +18,7 @@ function sortByStrings(stringA, stringB) {
 
 console.log(sortByStrings("weather", "therapyw")); //theeraw
 console.log(sortByStrings("good", "odg")); //oodg
+
+//Question 2
+
+//Question 3
