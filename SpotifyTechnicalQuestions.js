@@ -33,7 +33,7 @@ function sortByStrings(s, t) {
 function decodeString(s) {
   for (var i = 0; i < s.length; i++) {
     var current = s[i];
-    if (current === "[") {
+    if (current === "[" || current === "]") {
       console.log(current);
     }
     //console.log(current);
