@@ -1,12 +1,18 @@
 function sortByStrings(stringA, stringB) {
-  let newArray = [];
-  for (let i = 0; i < stringB.length; i++) {
-    let currentB = stringB[i];
-    if (stringA.includes(currentB)) {
-      newArray.push(currentB);
+  var results = [];
+
+  for (var i = 0; i < stringB.length; i++) {
+    var currentB = stringB[i];
+
+    for (var j = 0; j < stringA.length; j++) {
+      var currentA = stringA[j];
+
+      if (currentA === currentB) {
+        results.push(currentA);
+      }
     }
   }
-  return newArray;
+  return results.join("");
 }
 
 console.log(sortByStrings("weather", "therapyw")); //theeraw
