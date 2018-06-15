@@ -31,13 +31,17 @@ function sortByStrings(s, t) {
 // For s = "2[b3[a]]", the output should be decodeString(s) = "baaabaaa"
 
 function decodeString(s) {
-  for (var i = 0; i < s.length; i++) {
-    var current = s[i];
-    if (current === "[" || current === "]") {
-      console.log(current);
+  var array = [];
+  var newS = s.split("");
+
+  for (var i = 0; i < newS.length; i++) {
+    var current = newS[i];
+    if (!(current === "[" || current === "]")) {
+      //console.log(42, current);
+      array.push(current);
     }
-    //console.log(current);
   }
+  console.log(43, array);
 }
 //console.log(decodeString("4[ab]"));
 decodeString("2[b3[a]]");
