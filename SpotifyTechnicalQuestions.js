@@ -32,18 +32,23 @@ function sortByStrings(s, t) {
 
 function decodeString(s) {
   var array = [];
-  var newS = s.split("");
+  var newS = s.split("[");
+  var newSTwo = newS.join(" ");
+  var newSThree = newSTwo.split("]");
+  var newSFour = newSThree.join(" ");
 
-  for (var i = 0; i < newS.length; i++) {
-    var current = newS[i];
-    if (!(current === "[" || current === "]")) {
-      //console.log(42, current);
-      array.push(current);
-    }
-  }
-  console.log(43, array);
+  console.log(newSFour);
+
+  // for (var i = 0; i < newS.length; i++) {
+  //   var current = newS[i];
+  //   if (!(current === "[" || current === "]")) {
+  //     //console.log(42, current);
+  //     array.push(current);
+  //   }
+  // }
+  // console.log(43, array);
 }
-//console.log(decodeString("4[ab]"));
+//decodeString("4[ab]");
 decodeString("2[b3[a]]");
 
 // Question 3
