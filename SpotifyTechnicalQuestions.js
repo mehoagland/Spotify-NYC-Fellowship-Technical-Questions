@@ -62,6 +62,7 @@ var characters = [
 ];
 
 function decodeString(s) {
+  var char = "";
   var numArr = [];
   var charArr = [];
   var sSplit = s.split("");
@@ -81,11 +82,11 @@ function decodeString(s) {
     if (characters.indexOf(current) !== -1) {
       charArr.push(current);
       if (current !== "]" && current !== "[") {
-        var char = charArr.pop();
-        console.log(87, char);
+        char = char + charArr.pop();
       }
     }
   }
+  console.log(87, char);
 }
 
 decodeString("4[ab]");
