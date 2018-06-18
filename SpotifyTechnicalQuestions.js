@@ -30,26 +30,62 @@ function sortByStrings(s, t) {
 // For s = "4[ab]", the output should be decodeString(s) = "abababab"
 // For s = "2[b3[a]]", the output should be decodeString(s) = "baaabaaa"
 
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var characters = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+  "[",
+  "]"
+];
+
 function decodeString(s) {
-  var array = [];
-  var newS = s.split("[");
-  var newSTwo = newS.join(" ");
-  var newSThree = newSTwo.split("]");
-  var newSFour = newSThree.join(" ");
+  var numArr = [];
+  var charArr = [];
+  var sSplit = s.split("");
+  //console.log(sSplit);
 
-  console.log(newSFour);
-
-  // for (var i = 0; i < newS.length; i++) {
-  //   var current = newS[i];
-  //   if (!(current === "[" || current === "]")) {
-  //     //console.log(42, current);
-  //     array.push(current);
-  //   }
-  // }
-  // console.log(43, array);
+  for (var i = 0; i < sSplit.length; i++) {
+    var current = sSplit[i];
+    //console.log(current);
+    if (numbers.indexOf(Number(current)) !== -1) {
+      numArr.push(current);
+      console.log("numArr:", numArr);
+    }
+    if (characters.indexOf(current) !== -1) {
+      charArr.push(current);
+      if (current !== "[") {
+        console.log(charArr.pop());
+      }
+    }
+  }
+  //console.log(charArr);
 }
-//decodeString("4[ab]");
-decodeString("2[b3[a]]");
+
+decodeString("4[ab]");
 
 // Question 3
 // Your quirky boss collects rare, old coins.
