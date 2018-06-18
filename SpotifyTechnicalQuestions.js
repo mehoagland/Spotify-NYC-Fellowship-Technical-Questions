@@ -58,8 +58,7 @@ var characters = [
   "x",
   "y",
   "z",
-  "[",
-  "]"
+  "["
 ];
 
 function decodeString(s) {
@@ -74,22 +73,22 @@ function decodeString(s) {
     if (numbers.indexOf(Number(current)) !== -1) {
       numArr.push(current);
     }
+    if (current === "[") {
+      var number = Number(numArr.pop());
+      console.log(79, number);
+    }
+
     if (characters.indexOf(current) !== -1) {
-      if (current !== "[") {
-        if (current !== "]") {
-          charArr.push(current);
-        }
+      charArr.push(current);
+      if (current !== "]" && current !== "[") {
+        var char = charArr.pop();
+        console.log(87, char);
       }
     }
   }
-  console.log(numArr);
-  console.log(charArr);
-
-  //console.log(charArr);
 }
 
-//decodeString("4[ab]");
-decodeString("2[b3[a]]");
+decodeString("4[ab]");
 
 // Question 3
 // Your quirky boss collects rare, old coins.
