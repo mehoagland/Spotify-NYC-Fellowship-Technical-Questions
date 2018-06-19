@@ -76,7 +76,7 @@ function decodeString(s) {
       numArr.push(current);
     }
     if (current === "[") {
-      number = number + Number(numArr.pop());
+      number = Number(numArr.pop());
     }
 
     if (characters.indexOf(current) !== -1) {
@@ -89,11 +89,55 @@ function decodeString(s) {
 
   console.log(char.repeat(number));
 }
+
 //console.log(89, number);
 //console.log(90, char);
 
-//decodeString("4[ab]");
+decodeString("4[ab]");
 decodeString("2[b3[a]]");
+
+// function decodeString(s) {
+//   var char = ""; //empty var
+//   var number = 0; //var assigned to 0
+//   var numArr = []; //empty array for numbers
+//   var charArr = []; //empty array for characters
+//   var sSplit = s.split(""); //splitting the string up by each letter
+//   //console.log(sSplit);
+//
+//   for (var i = 0; i < sSplit.length; i++) {
+//     var current = sSplit[i];
+//
+//     //if number convert to a number and push to number arr
+//     if (numbers.indexOf(Number(current)) !== -1) {
+//       numArr.push(Number(current));
+//     }
+//     //if character, then push to character array
+//     if (characters.indexOf(current) !== -1) {
+//       charArr.push(current);
+//       //console.log(82, charArr);
+//
+//       //if character is a "]", pop all elements until '['
+//       if (current !== "]") {
+//         char = charArr.pop();
+//       }
+//
+//       if (current !== "[") {
+//         console.log(90, char);
+//         number = numArr.pop();
+//         //console.log(92, number);
+//         char = char.repeat(number);
+//         console.log(94, char);
+//       }
+//     }
+//   }
+//   //console.log(char);
+// }
+//
+// //console.log(89, number);
+// //console.log(90, char);
+//
+// decodeString("4[ab]");
+// //decodeString("2[b3[a]]");
 
 // Question 3
 // Your quirky boss collects rare, old coins.
