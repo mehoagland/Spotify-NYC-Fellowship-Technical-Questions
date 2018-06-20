@@ -156,13 +156,15 @@ function changePossibilities(n, amount) {
     if (amount.length === 1 && current === 0) {
       return 0;
     }
+
     for (var j = i; j < amount.length; j++) {
       var jCurrent = amount[j];
-      if (current + jCurrent === n) {
+      if (current + jCurrent <= n || current + jCurrent === n) {
         combos.push([current, jCurrent]);
       }
     }
   }
+
   return combos;
 }
 
