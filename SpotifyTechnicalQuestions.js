@@ -93,8 +93,8 @@ function decodeString(s) {
 //console.log(89, number);
 //console.log(90, char);
 
-decodeString("4[ab]");
-decodeString("2[b3[a]]");
+//decodeString("4[ab]");
+//decodeString("2[b3[a]]");
 
 function decodeStringTwo(s) {
   var char = "";
@@ -132,8 +132,8 @@ function decodeStringTwo(s) {
 //console.log(89, number);
 //console.log(90, char);
 
-decodeStringTwo("4[ab]");
-decodeStringTwo("2[b3[a]]");
+//decodeStringTwo("4[ab]");
+//decodeStringTwo("2[b3[a]]");
 
 // Question 3
 // Your quirky boss collects rare, old coins.
@@ -146,5 +146,16 @@ decodeStringTwo("2[b3[a]]");
 // 1¢, 3¢
 // 2¢, 2¢
 
-function changePossibilities(amount, amount) {}
-//console.log(changePossibilities(4, [1,2,3]));
+function changePossibilities(n, amount) {
+  if (amount.length === 0) {
+    return 0;
+  }
+  for (var i = 0; i < amount.length; i++) {
+    var current = amount[i];
+    if (amount.length === 1 && current === 0) {
+      return 0;
+    }
+  }
+}
+
+console.log(changePossibilities(4, [0]));
