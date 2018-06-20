@@ -21,8 +21,8 @@ function sortByStrings(s, t) {
   return results.join("");
 }
 
-//console.log(sortByStrings("weather", "therapyw")); //theeraw
-//console.log(sortByStrings("good", "odg")); //oodg
+console.log(sortByStrings("weather", "therapyw")); //theeraw
+console.log(sortByStrings("good", "odg")); //oodg
 
 // Question 2
 // Given an encoded string, return its corresponding decoded string.
@@ -67,11 +67,10 @@ function decodeString(s) {
   var numArr = [];
   var charArr = [];
   var sSplit = s.split("");
-  //console.log(sSplit);
 
   for (var i = 0; i < sSplit.length; i++) {
     var current = sSplit[i];
-    //console.log(current);
+
     if (numbers.indexOf(Number(current)) !== -1) {
       numArr.push(current);
     }
@@ -90,11 +89,8 @@ function decodeString(s) {
   console.log("decodeString:", char.repeat(number));
 }
 
-//console.log(89, number);
-//console.log(90, char);
-
-//decodeString("4[ab]");
-//decodeString("2[b3[a]]");
+decodeString("4[ab]");
+decodeString("2[b3[a]]");
 
 function decodeStringTwo(s) {
   var char = "";
@@ -106,7 +102,7 @@ function decodeStringTwo(s) {
 
   for (var i = 0; i < sSplit.length; i++) {
     var current = sSplit[i];
-    //console.log(current);
+
     if (numbers.indexOf(Number(current)) !== -1) {
       numArr.push(current);
     }
@@ -125,15 +121,11 @@ function decodeStringTwo(s) {
         console.log("decodeStringTwo:", char);
       }
     }
-    //console.log(char);
   }
 }
 
-//console.log(89, number);
-//console.log(90, char);
-
-//decodeStringTwo("4[ab]");
-//decodeStringTwo("2[b3[a]]");
+decodeStringTwo("4[ab]");
+decodeStringTwo("2[b3[a]]");
 
 // Question 3
 // Your quirky boss collects rare, old coins.
